@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaqy Emirul Kamil | Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            /* slate-50 */
+            color: #334155;
+            /* slate-700 */
+        }
+
+        .nav-link {
+            @apply relative px-4 py-2 hover:text-rose-600 transition-colors duration-300;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #be123c;
+            /* rose-700 */
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 50%;
+        }
+
+        .nav-link.active {
+            @apply text-rose-600;
+        }
+
+        .project-card,
+        .certificate-card {
+            @apply bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed top-0 left-0 right-0 z-40 bg-white shadow-md transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800">Zaqy Emirul Kamil</a>
+            <div id="desktop-menu" class="hidden md:flex space-x-2 items-center">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="mailto:zaqy.emirul0011@gmail.com"
+                    class="bg-rose-600 text-white px-5 py-2 rounded-lg hover:bg-rose-700 transition-colors">Contact
+                    Me</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <a href="#projects" class="block py-3 px-6 text-sm hover:bg-slate-50">Projects</a>
+            <a href="#certificates" class="block py-3 px-6 text-sm hover:bg-slate-50">Certificates</a>
+            <a href="#experience" class="block py-3 px-6 text-sm hover:bg-slate-50">Experience</a>
+            <a href="#skills" class="block py-3 px-6 text-sm hover:bg-slate-50 border-b">Skills</a>
+            <a href="mailto:zaqy.emirul0011@gmail.com"
+                class="block text-center m-4 bg-rose-600 text-white px-5 py-2 rounded-lg hover:bg-rose-700">Contact
+                Me</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section id="home" class="bg-slate-100 py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-800">Zaqy Emirul Kamil</h1>
+                <p class="mt-4 text-lg md:text-xl text-slate-600">Aspiring Web Developer & Proven Leader</p>
+                <p class="mt-4 text-md md:text-lg max-w-3xl mx-auto">
+                    A highly motivated Software Engineering student with a 3.90 GPA, passionate about building seamless
+                    web applications and leading teams to achieve measurable results.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="https://github.com/Zaqyemirul" target="_blank"
+                        class="bg-slate-800 text-white px-6 py-3 rounded-lg hover:bg-slate-900 transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/zaqy-emirul-kamil-4a708430b/" target="_blank"
+                        class="border border-slate-800 text-slate-800 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">Projek Saya</h2>
+                <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="py-20 md:py-28 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">Galeri Sertifikat</h2>
+                <div id="certificate-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-16">Riwayat Pengalaman</h2>
+                <div class="relative max-w-3xl mx-auto border-l-2 border-rose-200 pl-10">
+                    <div
+                        class="mb-12 relative before:content-[''] before:absolute before:left-[-49px] before:top-1 before:w-6 before:h-6 before:bg-rose-600 before:rounded-full before:border-4 before:border-white">
+                        <h3 class="text-xl font-bold text-slate-800">Head of Student Association</h3>
+                        <p class="text-md text-slate-500 mb-2">HIMA Software Engineering | Jan – Dec 2024</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-600">
+                            <li>Directed 5 annual programs, resulting in a 129% increase in member acquisition.</li>
+                            <li>Spearheaded a Machine Learning workshop, achieving 93% of the attendance target.</li>
+                            <li>Facilitated all strategic meetings and acted as the key decision-maker.</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="relative before:content-[''] before:absolute before:left-[-49px] before:top-1 before:w-6 before:h-6 before:bg-rose-600 before:rounded-full before:border-4 before:border-white">
+                        <h3 class="text-xl font-bold text-slate-800">Hacker (Front-end Focused)</h3>
+                        <p class="text-md text-slate-500 mb-2">HackFest 2024 by GDSC Indonesia | Dec 2023 – Jan 2024</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-600">
+                            <li>Led front-end development for the 'Healthy Children' web application.</li>
+                            <li>Translated complex UI/UX designs into a responsive user interface.</li>
+                            <li>Contributed to system design by creating comprehensive UML diagrams.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 md:py-28 bg-slate-800 text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Keahlian Saya</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div>
+                        <h3 class="text-lg font-bold text-rose-400 mb-2">Languages</h3>
+                        <ul class="space-y-1 text-slate-300">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>Kotlin</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-rose-400 mb-2">Frameworks</h3>
+                        <ul class="space-y-1 text-slate-300">
+                            <li>Laravel</li>
+                            <li>CodeIgniter</li>
+                            <li>Tailwind CSS</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-rose-400 mb-2">Databases</h3>
+                        <ul class="space-y-1 text-slate-300">
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-rose-400 mb-2">Tools & Others</h3>
+                        <ul class="space-y-1 text-slate-300">
+                            <li>Git & GitHub</li>
+                            <li>Figma</li>
+                            <li>UML</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Zaqy Emirul Kamil. Dibuat dengan semangat.</p>
+        </div>
+    </footer>
+
+
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+        <div class="relative bg-white p-2 rounded-lg max-w-4xl max-h-full">
+            <img id="modal-image-content" src="" alt="Sertifikat diperbesar" class="w-full h-auto max-h-[90vh] object-contain">
+            <button id="close-modal-btn" class="absolute -top-4 -right-4 bg-white text-slate-800 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-lg hover:bg-rose-600 hover:text-white transition-all">&times;</button>
+        </div>
+    </div>
+
+
+    <script>
+        // =================================================================================
+        // ===== DATABASE SEDERHANA (UBAH DATA DI SINI UNTUK UPDATE WEBSITE) =====
+        // =================================================================================
+
+        const projectsData = [
+            {
+                image: "images/mca.png",
+                title: "MCA Foundation Website",
+                tags: ["PHP", "Laravel", "Front-end", "Back-end"],
+                description: "Developed the official landing page to increase public awareness, handling both front-end and back-end aspects of the project.",
+                codeUrl: "https://github.com/Zaqyemirul/MCA",
+                demoUrl: "#" // Ganti dengan link demo jika ada
+            },
+            {
+                image: "images/anak_sehat.png",
+                title: "'Anak Sehat' Landing Page",
+                tags: ["HTML", "Tailwind CSS", "JavaScript"],
+                description: "A conceptual project focused on stunting prevention, featuring interactive front-end elements and deployed on GitHub Pages.",
+                codeUrl: "https://github.com/Zaqyemirul/landing-page",
+                demoUrl: "https://zaqyemirul.github.io/landing-page/"
+            },
+            {
+                image: "images/yurshop.png",
+                title: "E-commerce YurShop mobile app",
+                tags: ["Kotlin"],
+                description: "An e-commerce application for Android, built natively with Kotlin to provide a smooth and responsive user shopping experience.",
+                codeUrl: "https://github.com/AdamJoestar/yurshop.git",
+                demoUrl: "https://www.figma.com/proto/nW88yghebRE2Jp03JLSObL/OrganikShop?page-id=0%3A1&node-id=144-2&viewport=2553%2C939%2C0.17&t=aTa17pn1o6QrkdrM-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=144%3A2"
+            }
+            // --- UNTUK MENAMBAH PROYEK BARU, SALIN BLOK DI ATAS DAN TEMPEL DI SINI ---
+        ];
+
+        const certificatesData = [
+            {
+                thumbnail: "sertifikat/GDSC.jpg",
+                fullImage: "sertifikat/GDSC.jpg",
+                alt: "Sertifikat GDSC"
+            },
+            {
+                thumbnail: "sertifikat/python.jpg",
+                fullImage: "sertifikat/python.jpg",
+                alt: "Sertifikat Python"
+            },
+            {
+                thumbnail: "sertifikat/basis_data.jpg",
+                fullImage: "sertifikat/basis_data.jpg",
+                alt: "Sertifikat Basis Data"
+            }
+            // --- UNTUK MENAMBAH SERTIFIKAT BARU, SALIN BLOK DI ATAS DAN TEMPEL DI SINI ---
+        ];
+
+
+        // =========================================================================
+        // ===== LOGIKA WEBSITE (TIDAK PERLU DIUBAH KECUALI UNTUK PENGEMBANGAN) =====
+        // =========================================================================
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectGrid = document.getElementById('project-grid');
+
+            // --- Fungsi untuk merender Proyek ---
+            function renderProjects() {
+                if (!projectGrid) return;
+                projectGrid.innerHTML = ''; // Kosongkan grid sebelum mengisi
+                projectsData.forEach(project => {
+                    const tagsHTML = project.tags.map(tag =>
+                        `<span class="bg-rose-100 text-rose-800 text-xs font-medium px-2.5 py-0.5 rounded-full">${tag}</span>`
+                    ).join('');
+
+                    const projectCardHTML = `
+                        <div class="project-card">
+                             <img src="${project.image}" alt="${project.title} Screenshot" class="w-full h-56 object-cover">
+                            <div class="p-6 flex-grow flex flex-col">
+                                <h3 class="text-xl font-bold text-slate-800">${project.title}</h3>
+                                <div class="flex flex-wrap gap-2 my-3">${tagsHTML}</div>
+                                <p class="text-sm text-slate-600 mb-4 flex-grow">${project.description}</p>
+                                <div class="flex gap-4 mt-auto">
+                                    <a href="${project.codeUrl}" target="_blank" class="w-1/2 text-center bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-900 transition-colors">View Code</a>
+                                    <a href="${project.demoUrl}" target="_blank" class="w-1/2 text-center border border-slate-800 text-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition-colors">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    projectGrid.innerHTML += projectCardHTML;
+                });
+            }
+
+            // --- Fungsi untuk merender Sertifikat (DIMODIFIKASI) ---
+            function renderCertificates() {
+                const certificateGrid = document.getElementById('certificate-grid');
+                if (!certificateGrid) return;
+                certificateGrid.innerHTML = ''; // Kosongkan grid
+                certificatesData.forEach(cert => {
+                    // MODIFIKASI: Mengganti tag <a> dengan <div> dan menambahkan data-attribute
+                    const certCardHTML = `
+                        <div data-fullimage="${cert.fullImage}" class="certificate-card group cursor-pointer">
+                            <div class="relative">
+                                <img src="${cert.thumbnail}" alt="${cert.alt}" class="w-full h-48 object-cover">
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                                    <p class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">Lihat Gambar</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white">
+                                <h3 class="font-semibold text-sm text-slate-700 truncate">${cert.alt}</h3>
+                            </div>
+                        </div>
+                    `;
+                    certificateGrid.innerHTML += certCardHTML;
+                });
+                // Tambahkan kartu 'Tambah Sertifikat'
+                certificateGrid.innerHTML += `
+                    <div class="certificate-card border-2 border-dashed border-slate-300 flex items-center justify-center bg-white hover:bg-slate-50 transition-colors">
+                        <span class="text-slate-400 text-sm p-4 text-center">Tambah Sertifikat</span>
+                    </div>
+                `;
+            }
+
+            // === Navbar Interactivity ===
+            const header = document.getElementById('header');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main > section[id]');
+
+            window.addEventListener('scroll', () => {
+                let current = 'home';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 70) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // === Mobile Menu Toggle ===
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+
+            // === KODE BARU: LOGIKA MODAL GAMBAR ===
+            const imageModal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image-content');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            
+            const openModal = (imageUrl) => {
+                modalImage.src = imageUrl;
+                imageModal.classList.remove('hidden');
+                imageModal.classList.add('flex');
+            };
+    
+            const closeModal = () => {
+                imageModal.classList.add('hidden');
+                imageModal.classList.remove('flex');
+                modalImage.src = ""; 
+            };
+    
+            const certificateGrid = document.getElementById('certificate-grid');
+            certificateGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.certificate-card[data-fullimage]');
+                if (card) {
+                    const imageUrl = card.dataset.fullimage;
+                    openModal(imageUrl);
+                }
+            });
+    
+            closeModalBtn.addEventListener('click', closeModal);
+            imageModal.addEventListener('click', (e) => {
+                if (e.target === imageModal) {
+                    closeModal();
+                }
+            });
+            // === AKHIR DARI KODE BARU ===
+
+
+            // --- Panggil fungsi render saat halaman dimuat ---
+            renderProjects();
+            renderCertificates();
+        });
+    </script>
+
+</body>
+
+</html>
